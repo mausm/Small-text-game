@@ -43,3 +43,4 @@ Username | Last_sentence | RSS
 Last_sentence = the sentence on which the user ended his last session
 RSS = relationship score, how nice they are to the different npcs 
 
+"""
