@@ -3,9 +3,11 @@
 #the user selects an option in that list -> Done
 #the program returns a new sentence based on the choosen options -> Done
 #the user can exit the program -> Done
+#give the user the ability to add and edit single lines in the db
+
+
 
 #TODO:
-#give the user the ability to add and edit single lines in the db
 #program imports last state: optional
 #user can save his name and his progress (other db table)
 #ensure that the id (see below) is unique  UNIQUE 
