@@ -60,3 +60,22 @@ def insert_large_dataset(Dataset):
         cursor.executemany(query,records_to_insert)
 
     return True
+
+# this part is to add or modify one line
+def change_sentence(index, tuple_of_info):
+    with DatabaseConnection(DATABASE_NAME) as connection:
+        cursor = connection.cursor()
+
+        index = (index,)
+        val = tuple_of_info + index
+        query = "UPDATE Sentences SET Chapter = ?, Sentence = ?, Option = ?, Destination = ? ,Content = ? WHERE id = ?"
+        cursor.execute(query, val)
+
+def add_sentence(tuple_of_info):
+    with DatabaseConnection(DATABASE_NAME) as connection:
+        cursor = connection.cursor()
+
+
+        val = tuple_of_info
+        query = "INSERT INTO Sentences VALUES (?,?,?,?,?,?)"
+        cursor.execute(query, val)
