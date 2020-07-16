@@ -25,9 +25,6 @@ def create_table():
                         Sentence integer, Option integer, Destination integer, Content text);""")
 
 
-
-
-
 def get_sentence(index):
     with DatabaseConnection(DATABASE_NAME) as connection:
         cursor = connection.cursor()
@@ -61,6 +58,7 @@ def insert_large_dataset(Dataset):
 
     return True
 
+
 # this part is to add or modify one line
 def change_sentence(index, tuple_of_info):
     with DatabaseConnection(DATABASE_NAME) as connection:
@@ -71,10 +69,10 @@ def change_sentence(index, tuple_of_info):
         query = "UPDATE Sentences SET Chapter = ?, Sentence = ?, Option = ?, Destination = ? ,Content = ? WHERE id = ?"
         cursor.execute(query, val)
 
+        
 def add_sentence(tuple_of_info):
     with DatabaseConnection(DATABASE_NAME) as connection:
         cursor = connection.cursor()
-
 
         val = tuple_of_info
         query = "INSERT INTO Sentences VALUES (?,?,?,?,?,?)"
