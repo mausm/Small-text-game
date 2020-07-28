@@ -1,7 +1,8 @@
-import data as db_formulas
 import pandas as pd
 
-print("For old excel files (.xlsx) you have to install the xlrd module")
+import data as db_formulas
+
+print("For excel files (.xlsx) you have to install the xlrd module")
 
 Column_dict = \
     {0:"id",
